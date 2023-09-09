@@ -1,4 +1,5 @@
-import com.example.demo_satu.PrimaryBean;
+package com.example.demo_satu;
+
 import com.example.demo_satu.data.Foo;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
