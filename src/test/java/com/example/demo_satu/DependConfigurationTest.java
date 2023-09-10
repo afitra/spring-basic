@@ -7,6 +7,11 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 
 public class DependConfigurationTest {
 
+    /*
+
+    unutuk meenentukan urutan bean
+     */
+
     private ApplicationContext context;
 
     @BeforeEach
