@@ -6,18 +6,15 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Primary;
 
 @Configuration
-public class PrimaryBean {
-
-    @Bean
-    public Foo foo3() {
-        Foo result = new Foo();
-        return result;
+public class DedicatedBean {
+    @Primary
+    @Bean(name = "firstBean")
+    public Foo foo1() {
+        return new Foo();
     }
 
-    @Primary
-    @Bean
-    public Foo foo4() {
-        Foo result = new Foo();
-        return result;
+    @Bean(name = "secondBean")
+    public Foo foo2() {
+        return new Foo();
     }
 }
