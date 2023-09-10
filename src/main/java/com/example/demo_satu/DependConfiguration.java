@@ -24,7 +24,7 @@ public class DependConfiguration {
 
     @Bean
     public Dam damtes() {
-        log.info("create foo >>>> 1");
+        log.info("create dam >>>> 2");
         return new Dam();
     }
 }
