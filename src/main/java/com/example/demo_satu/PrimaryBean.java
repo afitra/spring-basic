@@ -9,14 +9,14 @@ import org.springframework.context.annotation.Primary;
 public class PrimaryBean {
 
     @Bean
-    public Foo foo1() {
+    public Foo foo3() {
         Foo result = new Foo();
         return result;
     }
 
     @Primary
     @Bean
-    public Foo foo2() {
+    public Foo foo4() {
         Foo result = new Foo();
         return result;
     }
