@@ -14,7 +14,7 @@ public class PrimaryBeanTest {
 
         Foo result = context.getBean(Foo.class);
 
-        Assertions.assertNotNull(context);
+        Assertions.assertNotNull(result);
 
     }
 
