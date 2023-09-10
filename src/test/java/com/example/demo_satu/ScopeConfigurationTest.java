@@ -37,4 +37,5 @@ public class ScopeConfigurationTest {
         Assertions.assertSame(dam2, dam3);
     }
 
+
 }

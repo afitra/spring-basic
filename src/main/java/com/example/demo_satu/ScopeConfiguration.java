@@ -2,7 +2,9 @@ package com.example.demo_satu;
 
 import com.example.demo_satu.data.Dam;
 import com.example.demo_satu.data.Foo;
+import com.example.demo_satu.scope.CostomScope;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.config.CustomScopeConfigurer;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Scope;
@@ -34,4 +36,19 @@ public class ScopeConfiguration {
         log.info("Create Scope damm");
         return new Dam();
     }
+
+    @Bean
+    public CustomScopeConfigurer customScopeConfigurer() {
+        CustomScopeConfigurer configurer = new CustomScopeConfigurer();
+        configurer.addScope("tesScope", new CostomScope());
+        return configurer;
+    }
+
+    @Bean
+    @Scope("tesScope")
+    public Dam damCostomScope() {
+        log.info("create dam costom scope xxx>>> ");
+        return new Dam();
+    }
+
 }
