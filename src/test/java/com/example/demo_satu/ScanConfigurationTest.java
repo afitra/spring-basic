@@ -7,16 +7,16 @@ import org.junit.jupiter.api.Test;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
-public class ImportTest {
+public class ScanConfigurationTest {
     private ConfigurableApplicationContext context;
 
     @BeforeEach
     void setup() {
-        context = new AnnotationConfigApplicationContext(MainImport.class);
+        context = new AnnotationConfigApplicationContext(ScanConfiguration.class);
     }
 
     @Test
-    void importTest() {
+    void scanConfogurationTest() {
         Foo foo = context.getBean("fooImportClass", Foo.class);
         Dam dam = context.getBean("damImportClass", Dam.class);
     }
