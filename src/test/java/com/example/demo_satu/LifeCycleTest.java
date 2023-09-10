@@ -12,6 +12,8 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
     untuk menghentikan app
 
     selain menggunakan .close() bisa juga menggunakan methos .registerShutdownHook()
+
+    registerShutdownHook berfungsi juga untuk akse handle ketika server mati
  */
 
 public class LifeCycleTest {
@@ -21,7 +23,6 @@ public class LifeCycleTest {
     @BeforeEach
     void setup() {
         context = new AnnotationConfigApplicationContext(LifeCycleConfiguration.class);
-
     }
 
     @AfterEach
