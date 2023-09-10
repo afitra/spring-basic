@@ -1,15 +1,15 @@
-package com.example.demo_satu;
+package com.example.demo_satu.configuration;
 
 import com.example.demo_satu.data.Dam;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.Lazy;
 
 @Configuration
 public class DamImport {
-    @Lazy
+    //    @Lazy
     @Bean
-    public Dam damImport() {
+    public Dam damImportClass() {
         return new Dam();
     }
+
 }
