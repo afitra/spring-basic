@@ -7,7 +7,7 @@ import org.springframework.context.annotation.Import;
 
 /*
 
-    Import digunakan untuk memanggil banyak class sehingga lebih rapi
+    @Import digunakan untuk memanggil banyak class sehingga lebih rapi
     biasanya di gunakan untuk import berbagai config class
  */
 
