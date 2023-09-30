@@ -1,6 +1,8 @@
 package com.example.demo_satu;
 
+import com.example.demo_satu.repository.CategoryRepository;
 import com.example.demo_satu.repository.ProductRepository;
+import com.example.demo_satu.service.CategoryService;
 import com.example.demo_satu.service.ProductService;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
@@ -33,6 +35,14 @@ public class ComponentConfigurationTest {
         ProductRepository productRepository = applicationContext.getBean(ProductRepository.class);
 
         Assertions.assertSame(productRepository, productService.getProductRepository());
+    }
+
+    @Test
+    void setterDependencieyInjection() {
+        CategoryService categoryService = applicationContext.getBean(CategoryService.class);
+        CategoryRepository categoryRepository = applicationContext.getBean(CategoryRepository.class);
+
+        Assertions.assertSame(categoryService.getCategoryRepository(), categoryRepository);
     }
 
 }
