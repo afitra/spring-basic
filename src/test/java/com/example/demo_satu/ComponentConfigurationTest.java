@@ -1,5 +1,6 @@
 package com.example.demo_satu;
 
+import com.example.demo_satu.repository.ProductRepository;
 import com.example.demo_satu.service.ProductService;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
@@ -24,6 +25,14 @@ public class ComponentConfigurationTest {
 
         Assertions.assertSame(productService1, productService2);
 
+    }
+
+    @Test
+    void constructorDependencyInjectionTest() {
+        ProductService productService = applicationContext.getBean(ProductService.class);
+        ProductRepository productRepository = applicationContext.getBean(ProductRepository.class);
+
+        Assertions.assertSame(productRepository, productService.getProductRepository());
     }
 
 }
