@@ -1,7 +1,9 @@
 package com.example.demo_satu;
 
+import com.example.demo_satu.data.MultiFoo;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Import;
 
 @Configuration
 @ComponentScan(basePackages = {
@@ -10,5 +12,7 @@ import org.springframework.context.annotation.Configuration;
         "com.example.demo_satu.configuration",
 })
 
+
+@Import(MultiFoo.class)
 public class ComponentConfiguration {
 }
