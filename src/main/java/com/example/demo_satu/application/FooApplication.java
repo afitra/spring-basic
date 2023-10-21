@@ -26,6 +26,7 @@ public class FooApplication {
         SpringApplication application = new SpringApplication(FooApplication.class);
         application.setBannerMode(Banner.Mode.OFF);
 
+//        application.setListeners(List.of(new AppStartingListener()));
         ConfigurableApplicationContext applicationContext = application.run(args);
 
         Foo foo = applicationContext.getBean(Foo.class);
