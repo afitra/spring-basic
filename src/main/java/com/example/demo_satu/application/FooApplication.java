@@ -15,14 +15,14 @@ public class FooApplication {
         return new Foo();
     }
 
-//    public static void main(String[] args) {
+//    public static void main(String[] args) {  // normal tanpa costom
 //        ConfigurableApplicationContext applicationContext = SpringApplication.run(Foo.class, args);
 //        Foo foo = applicationContext.getBean(Foo.class);
 //        System.out.println(foo);
 //    }
 
 
-    public static void main(String[] args) {
+    public static void main(String[] args) { // untuk costo,
         SpringApplication application = new SpringApplication(FooApplication.class);
         application.setBannerMode(Banner.Mode.OFF);
 
